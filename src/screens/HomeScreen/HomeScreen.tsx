@@ -80,7 +80,14 @@ const HomeScreen: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#fff', paddingHorizontal: 24 },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  content: {
+    flex: 1,
+    paddingHorizontal: 24,
+  },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
