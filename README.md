@@ -1,4 +1,4 @@
-# 📱 Orbis - Aplicativo de Assistência Comunitária
+# 📱 Orbis - Conectando Solidariedade em Tempos de Emergência
 
 Projeto desenvolvido por alunos do segundo ano do curso de Análise e Desenvolvimento de Sistemas da FIAP, para a Global Solution 01/2025.
 
