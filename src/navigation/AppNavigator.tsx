@@ -6,6 +6,8 @@ import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import ReporteEmergenciaScreen from '../screens/ReporteEmergencia/ReporteEmergenciaScreen';
 import SelecionarLocalizacaoScreen from '../screens/SelecionarLocalizacaoScreen/SelecionarLocalizacaoScreen';
 import ComunidadeScreen from '../screens/ComunidadeScreen/ComunidadeScreen';
+import PerfilScreen from '../screens/PerfilScreen/PerfilScreen';
+import EmergenciasScreen from '../screens/EmergenciasScreen/EmergenciasScreen';
 
 
 const Stack = createStackNavigator();
@@ -19,6 +21,8 @@ const AppNavigator = () => {
   <Stack.Screen name="ReporteEmergencia" component={ReporteEmergenciaScreen} />
   <Stack.Screen name="SelecionarLocalizacao" component={SelecionarLocalizacaoScreen}/>
   <Stack.Screen name="Comunidade" component={ComunidadeScreen} />
+  <Stack.Screen name="Perfil" component={PerfilScreen} />
+  <Stack.Screen name="SOS" component={EmergenciasScreen} />
   </Stack.Navigator>
   );
 };
