@@ -11,9 +11,9 @@ import { useNavigation } from '@react-navigation/native';
 
 const SelecionarLocalizacaoScreen = () => {
   const navigation = useNavigation();
-  const [local, setLocal] = useState('FIAP');
-  const [bairro, setBairro] = useState('Vila Mariana');
-  const [numero, setNumero] = useState('1264');
+  const [local, setLocal] = useState('');
+  const [bairro, setBairro] = useState('Bairro');
+  const [numero, setNumero] = useState('Número');
 
   const handleConfirmar = () => {
     alert(`${local}, ${bairro}, ${numero}`);
