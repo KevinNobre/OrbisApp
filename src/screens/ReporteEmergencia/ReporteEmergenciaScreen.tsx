@@ -135,6 +135,7 @@ const styles = StyleSheet.create({
     height: 48,
     marginBottom: 4,
     resizeMode: 'contain',
+    tintColor: '#000',
   },
   check: {
     position: 'absolute',
