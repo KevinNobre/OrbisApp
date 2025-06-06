@@ -5,6 +5,7 @@ import RegistroScreen from '../screens/RegistroScreen/RegistroScreen';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import ReporteEmergenciaScreen from '../screens/ReporteEmergencia/ReporteEmergenciaScreen';
 import SelecionarLocalizacaoScreen from '../screens/SelecionarLocalizacaoScreen/SelecionarLocalizacaoScreen';
+import ComunidadeScreen from '../screens/ComunidadeScreen/ComunidadeScreen';
 
 
 const Stack = createStackNavigator();
@@ -17,7 +18,7 @@ const AppNavigator = () => {
   <Stack.Screen name="Home" component={HomeScreen} />
   <Stack.Screen name="ReporteEmergencia" component={ReporteEmergenciaScreen} />
   <Stack.Screen name="SelecionarLocalizacao" component={SelecionarLocalizacaoScreen}/>
-
+  <Stack.Screen name="Comunidade" component={ComunidadeScreen} />
   </Stack.Navigator>
   );
 };

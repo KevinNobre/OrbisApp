@@ -18,6 +18,7 @@ type RootStackParamList = {
   Home: undefined;
   ReporteEmergencia: undefined;
   SelecionarLocalizacao: undefined;
+  Comunidade: undefined;
 };
 
 type LoginScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Login'>;
