@@ -12,12 +12,12 @@ import { useNavigation } from '@react-navigation/native';
 const SelecionarLocalizacaoScreen = () => {
   const navigation = useNavigation();
   const [local, setLocal] = useState('');
-  const [bairro, setBairro] = useState('Bairro');
-  const [numero, setNumero] = useState('Número');
+  const [bairro, setBairro] = useState('');
+  const [numero, setNumero] = useState('');
 
   const handleConfirmar = () => {
-    alert(`${local}, ${bairro}, ${numero}`);
-    navigation.goBack();
+    const enderecoCompleto = `${local}, ${bairro}, ${numero}`;
+    navigation.navigate('ReporteEmergencia', { endereco: enderecoCompleto });
   };
 
   return (
@@ -33,7 +33,6 @@ const SelecionarLocalizacaoScreen = () => {
       </View>
 
       <TextInput placeholder="CEP" style={styles.input} />
-
 
       <View style={styles.inputGroup}>
         <TextInput value={local} onChangeText={setLocal} style={styles.input} placeholder="Local" />
@@ -59,12 +58,6 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 12,
     marginBottom: 8,
-  },
-  map: {
-    width: '100%',
-    height: 200,
-    borderRadius: 8,
-    marginBottom: 16,
   },
   inputGroup: {},
   confirmar: {
