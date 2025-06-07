@@ -32,9 +32,24 @@ const RegistroScreen: React.FC<Props> = ({ navigation }) => {
   const [cep, setCep] = useState('');
   const [senha, setSenha] = useState('');
 
-  const handleRegister = () => {
-    alert(`Nome: ${nome}\nTelefone: ${telefone}\nCEP: ${cep}\nSenha: ${senha}`);
-  };
+const handleRegister = async () => {
+  try {
+    const novoUsuario = {
+      nome,
+      telefone,
+      cep,
+      senha
+    };
+
+    const response = await createUser(novoUsuario);
+
+    alert('Usuário cadastrado com sucesso!');
+    navigation.navigate('Login');
+  } catch (error) {
+    alert(`Erro ao cadastrar usuário: ${error instanceof Error ? error.message : 'Erro desconhecido'}`);
+  }
+};
+
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#FFFFFF" }}>
