@@ -1,10 +1,10 @@
 # 📱 Orbis - Conectando Solidariedade em Tempos de Emergência
 
-<img src="https://github.com/user-attachments/assets/3105daf6-6d7b-48a7-816f-815f9fc1582e" width="170" />
-<img src="https://github.com/user-attachments/assets/1a7d7fbe-6e80-4775-b124-9e8fc9338ab4" width="170" />
-<img src="https://github.com/user-attachments/assets/92fd9893-2118-4abf-b022-045c7bc1d215" width="170" />
-<img src="https://github.com/user-attachments/assets/61e550e5-7326-4042-8785-32d25f7cc3d8" width="170" />
-<img src="https://github.com/user-attachments/assets/68a727e6-82b1-4ff5-8b11-304ef6ea9502" width="170" />
+<img src="https://github.com/user-attachments/assets/3105daf6-6d7b-48a7-816f-815f9fc1582e" width="160" />
+<img src="https://github.com/user-attachments/assets/1a7d7fbe-6e80-4775-b124-9e8fc9338ab4" width="160" />
+<img src="https://github.com/user-attachments/assets/92fd9893-2118-4abf-b022-045c7bc1d215" width="160" />
+<img src="https://github.com/user-attachments/assets/61e550e5-7326-4042-8785-32d25f7cc3d8" width="160" />
+<img src="https://github.com/user-attachments/assets/68a727e6-82b1-4ff5-8b11-304ef6ea9502" width="160" />
 
 ---
 
@@ -32,13 +32,21 @@ Usuários podem solicitar ajuda, reportar emergências e contribuir com doaçõe
 
 ---
 
+## 🚀 Programa Funcional
+
+Exemplificação de Login Autenticado via API .NET e Banco SQL.
+
+![GIF ORBIS](https://github.com/user-attachments/assets/0c91e3aa-056e-4801-ac82-a690cedd3b26)
+
+---
+
 ## 📱 Tecnologias Utilizadas
 
 - **React Native**: Framework para desenvolvimento mobile multiplataforma.
 - **Expo**: Plataforma que facilita o desenvolvimento, build e deploy do app.
 - **TypeScript** (opcional): Para maior robustez e escalabilidade.
 - **React Navigation**: Navegação entre telas (stack e bottom tab).
-- **Context API**: Gerenciamento de estado global.
+- **Context API .NET**: Gerenciamento de estado global.
 - **Axios**: Comunicação com API REST.
 - **ML.NET (via backend)**: Classificação de urgência dos pedidos.
 - **RabbitMQ (via microsserviços)**: Sistema de mensageria para filas de eventos.
