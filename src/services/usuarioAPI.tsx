@@ -11,19 +11,18 @@ const api = axios.create({
 
 export const loginUser = async (telefone: string, senha: string) => {
   try {
-    
-    const response = await api.get('api/Usuario'); 
+    const response = await api.get('/api/Usuario');
 
-    if (response.data._embedded && response.data._embedded.usuarioList) {
-      const usuario = response.data._embedded.usuarioList.find((usuario: any) => usuario.telefone === telefone && usuario.senha === senha);
-      
-      if (usuario) {
-        return usuario;
-      } else {
-        throw new Error('Telefone ou senha não conferem');
-      }
+    const listaUsuarios = response.data; 
+
+    const usuario = listaUsuarios.find(
+      (usuario: any) => usuario.telefone === telefone && usuario.senha === senha
+    );
+
+    if (usuario) {
+      return usuario;
     } else {
-      throw new Error('Resposta da API inválida');
+      throw new Error('Telefone ou senha não conferem');
     }
   } catch (error: unknown) {
     if (error instanceof Error) {
@@ -33,6 +32,7 @@ export const loginUser = async (telefone: string, senha: string) => {
     }
   }
 };
+
 
 
 export const createUser = async (novoUsuario: usuario) => {
