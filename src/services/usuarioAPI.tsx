@@ -3,7 +3,7 @@ import { usuario } from './types';
 
 
 const api = axios.create({
-  baseURL: 'http://localhost:7250/', 
+  baseURL: 'https://localhost:7250/', 
   headers: {
     'Content-Type': 'application/json', 
   },
