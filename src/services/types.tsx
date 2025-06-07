@@ -1,5 +1,5 @@
 export interface usuario {
-    usuarioId: number;
+    usuarioId?: number;
     nome: string;
     sobrenome: string;
     cep: string;

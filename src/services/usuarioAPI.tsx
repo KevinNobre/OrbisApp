@@ -12,11 +12,10 @@ const api = axios.create({
 export const loginUser = async (telefone: string, senha: string) => {
   try {
     
-    const response = await api.get('/usuarios'); 
+    const response = await api.get('api/Usuario'); 
 
-    // Verifica se a resposta contém os dados esperados
     if (response.data._embedded && response.data._embedded.usuarioList) {
-      const usuario = response.data._embedded.usuarioList.find((usuario: any) => usuario.email === telefone && usuario.senha === senha);
+      const usuario = response.data._embedded.usuarioList.find((usuario: any) => usuario.telefone === telefone && usuario.senha === senha);
       
       if (usuario) {
         return usuario;
@@ -27,7 +26,6 @@ export const loginUser = async (telefone: string, senha: string) => {
       throw new Error('Resposta da API inválida');
     }
   } catch (error: unknown) {
-    // Trato de erro: Se for um erro padrão, exibe a mensagem
     if (error instanceof Error) {
       throw new Error(error.message || 'Erro ao tentar fazer login');
     } else {

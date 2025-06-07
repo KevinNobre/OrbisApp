@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
+import { createUser } from '../../services/usuarioAPI';
 
 type RootStackParamList = {
   Login: undefined;
