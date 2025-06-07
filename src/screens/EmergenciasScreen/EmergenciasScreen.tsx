@@ -8,17 +8,18 @@ import {
   Image,
 } from 'react-native';
 import NavBar from '../../components/NavBar';
+import { useEmergencias } from '../../context/EmergenciaContext';
 
 const dadosMock = [
   {
-    id: 1,
+    id: '1',
     tipo: 'Alagamento',
     descricao: 'A região do bairro da Vila Prudente está alagada devido a chuvas intensas na região, pessoas estão ilhadas próximas ao metrô.',
     endereco: 'Av Anhaia Mello, Vila Prudente, 411',
     icone: require('../../assets/alagamento.png'),
   },
   {
-    id: 2,
+    id: '2',
     tipo: 'Ajuda Médica',
     descricao: 'Estamos precisando de itens de curativo para ajudar animais feridos por conta de um deslizamento de terra.',
     endereco: 'Av Lins, Vila Mariana, 4110',
@@ -28,6 +29,9 @@ const dadosMock = [
 
 export default function EmergenciasScreen() {
   const [abaAtiva, setAbaAtiva] = useState<'voce' | 'outros'>('voce');
+  const { emergenciasUsuario } = useEmergencias();
+
+  const dadosParaMostrar = abaAtiva === 'voce' ? emergenciasUsuario : dadosMock;
 
   return (
     <View style={styles.container}>
@@ -57,7 +61,7 @@ export default function EmergenciasScreen() {
       </View>
 
       <ScrollView style={styles.list}>
-        {dadosMock.map((item) => (
+        {dadosParaMostrar.map((item) => (
           <View key={item.id} style={styles.card}>
             <View style={styles.cardHeader}>
               <View style={styles.location}>
@@ -185,7 +189,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 40,
     paddingHorizontal: 24,
-    paddingBottom: 80, 
+    paddingBottom: 80,
     backgroundColor: '#fff',
   },
   navbarContainer: {

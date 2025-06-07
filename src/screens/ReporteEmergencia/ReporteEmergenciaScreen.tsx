@@ -8,6 +8,7 @@ import {
   ScrollView,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { useEmergencias } from '../../context/EmergenciaContext';
 
 const emergencias = [
   { id: 'acidente', label: 'Acidente', icon: require('../../assets/acidente.png') },
@@ -18,11 +19,22 @@ const emergencias = [
 ];
 
 const ReporteEmergenciaScreen = () => {
-  const [tipoSelecionado, setTipoSelecionado] = useState('acidente');
+  const [tipoSelecionado, setTipoSelecionado] = useState('Acidente');
   const navigation = useNavigation();
 
+  const { adicionarEmergencia } = useEmergencias();
+
   const handleConfirmar = () => {
-    alert(`Tipo de emergência: ${tipoSelecionado}`);
+    const novaEmergencia = {
+      id: new Date().getTime().toString(),
+      tipo: tipoSelecionado,
+      descricao: 'Emergência reportada pelo usuário.',
+      endereco: 'FIAP, 1264',
+      icone: emergencias.find(e => e.id === tipoSelecionado)?.icon || require('../../assets/acidente.png'),
+    };
+
+    adicionarEmergencia(novaEmergencia);
+    navigation.navigate('Home');
   };
 
   const handleAlterarLocalizacao = () => {
