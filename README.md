@@ -1,5 +1,13 @@
 # 📱 Orbis - Conectando Solidariedade em Tempos de Emergência
 
+<img src="https://github.com/user-attachments/assets/3105daf6-6d7b-48a7-816f-815f9fc1582e" width="170" />
+<img src="https://github.com/user-attachments/assets/1a7d7fbe-6e80-4775-b124-9e8fc9338ab4" width="170" />
+<img src="https://github.com/user-attachments/assets/92fd9893-2118-4abf-b022-045c7bc1d215" width="170" />
+<img src="https://github.com/user-attachments/assets/61e550e5-7326-4042-8785-32d25f7cc3d8" width="170" />
+<img src="https://github.com/user-attachments/assets/68a727e6-82b1-4ff5-8b11-304ef6ea9502" width="170" />
+
+---
+
 Projeto desenvolvido por alunos do segundo ano do curso de Análise e Desenvolvimento de Sistemas da FIAP, para a Global Solution 01/2025 - Protech the Future.
 
 - KEVIN CHRISTIAN NOBRE – RM: 552590 - Desenvolvedor Full Stack - Mobile & .NET
