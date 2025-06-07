@@ -11,6 +11,8 @@ import {
 } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
+import { loginUser } from '../../services/usuarioAPI';
+import {Toast } from 'native-base';
 
 type RootStackParamList = {
   Login: undefined;
@@ -36,8 +38,26 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
   const [telefone, setTelefone] = useState('');
   const [senha, setSenha] = useState('');
 
-  const handleLogin = () => {
-    alert(`Telefone: ${telefone}\nSenha: ${senha}`);
+
+  const handleLogin = async () => {
+   try {
+       const usuario = await loginUser(telefone, senha);
+
+       if (usuario) {
+         navigation.navigate('Home');
+       } else {
+         Toast.show({
+           description: 'Telefone ou senha não conferem. Tente novamente.',
+           bgColor: 'red.500',
+         });
+       }
+     } catch (error) {
+       console.error('Erro ao tentar fazer login', error);
+       Toast.show({
+         description: 'Erro ao tentar fazer login. Tente novamente.',
+         bgColor: 'red.500',
+       });
+     }
   };
 
   return (
@@ -55,7 +75,7 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
           <Text style={styles.label}>Telefone</Text>
           <TextInput
             style={styles.input}
-            placeholder="+55 |"
+            placeholder=""
             keyboardType="phone-pad"
             value={telefone}
             onChangeText={setTelefone}
@@ -80,7 +100,7 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
             <Text style={styles.forgot}>Esqueceu a senha?</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate('Home')}>
+          <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
             <Text style={styles.loginButtonText}>Login</Text>
           </TouchableOpacity>
 
