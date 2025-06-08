@@ -21,6 +21,9 @@ Projeto desenvolvido por alunos do segundo ano do curso de Análise e Desenvolvi
 O **Orbis** é um aplicativo mobile desenvolvido em **React Native com Expo**, com o objetivo de facilitar a conexão entre pessoas em situação de emergência e a comunidade ao seu redor. 
 Usuários podem solicitar ajuda, reportar emergências e contribuir com doações ou ações voluntárias.
 
+### Vídeo Pitch
+[Clique aqui](https://www.youtube.com/watch?v=A1gLzrINBCg&feature=youtu.be) para conhecer melhor sobre o Orbis.
+
 ## 🚀 Funcionalidades Principais
 
 - 🆘 **Botão SOS:** Acesso rápido para solicitar ajuda em situações críticas a desastres.
